@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rita l helwe</title>
+    <style>
+        body {
+            background-color: red;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 10px; /* Adjusted padding for smaller screens */
+            margin: 0; /* Remove default margin */
+        }
+        .container {
+            max-width: 100%; /* Make sure container stretches to full width on smaller screens */
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 0 auto; /* Center container horizontally */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .form-group button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
+            margin-right: 10px;
+        }
+        .form-group button:hover {
+            opacity: 0.8;
+            transform: scale(0.95);
+        }
+        .alert {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Badik l CV?<br>Tekrame 3ende so2al zghir la elik</h1>
+        <form id="cvForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="cv_question"><h3>Would you go out on a date ma3 l ma8rour?</h3></label>
+                <br>
+                <button type="button" name="answer" value="yes" onclick="showYesAlert()">Yes</button>
+                <button type="button" name="answer" value="no" onclick="showNoAlert()">No</button>
+            </div>
+        </form>
+        <div id="yesAlert" class="alert form-group" style="display: none;">
+            <p>Tmm tmm hl2 btesta7e2e tekhde l CV :p</p>
+            <button onclick="downloadCV()">Download CV</button>
+        </div>
+        <div id="noAlert" class="alert" style="display: none;">
+            <p>Ense CV</p>
+        </div>
+    </div>
+    <script>
+        function showYesAlert() {
+            document.getElementById('yesAlert').style.display = 'block';
+            document.getElementById('noAlert').style.display = 'none';
+        }
+
+        function showNoAlert() {
+            document.getElementById('noAlert').style.display = 'block';
+            document.getElementById('yesAlert').style.display = 'none';
+        }
+
+        function downloadCV() {
+            // Replace with actual download logic
+            // Simulate download for demonstration
+            window.location.href = 'Rita Bou Msallem (CV).pdf';
+        }
+    </script>
+</body>
+</html>
